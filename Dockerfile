@@ -13,7 +13,8 @@ RUN export LANG=C.UTF-8 &&\
     apt-get -y dist-upgrade &&\
 # install utilities
     apt-get install -f -y apt-utils python-software-properties software-properties-common&&\
-    add-apt-repository ppa:jonathonf/texlive -y &&\
+    #add-apt-repository ppa:jonathonf/texlive -y &&\
+    add-apt-repository ppa:jonathonf/texlive-2016 -y &&\
     apt-get update &&\
 # install some nice chinese fonts
     apt-get install -f -y fonts-arphic-bkai00mp \
