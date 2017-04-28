@@ -1,6 +1,7 @@
 #tianon/latex
 #FROM debian:latest
-FROM ubuntu:16.04
+#FROM ubuntu:16.04
+FROM ubuntu:rolling
 ARG DEBIAN_FRONTEND=noninteractive
 RUN export LANG=C.UTF-8 &&\
     apt-get clean &&\
