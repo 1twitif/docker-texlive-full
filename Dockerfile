@@ -1,6 +1,6 @@
 #tianon/latex
-FROM debian:latest
-#FROM ubuntu:16.04
+#FROM debian:latest
+FROM ubuntu:16.04
 
 RUN export LANG=C.UTF-8 &&\
     add-apt-repository ppa:jonathonf/texlive -y &&\
