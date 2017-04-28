@@ -1,7 +1,7 @@
 #tianon/latex
 #FROM debian:latest
-#FROM ubuntu:16.04
-FROM ubuntu:rolling
+FROM ubuntu:latest
+#FROM ubuntu:rolling
 ARG DEBIAN_FRONTEND=noninteractive
 RUN export LANG=C.UTF-8 &&\
     apt-get clean &&\
@@ -9,7 +9,8 @@ RUN export LANG=C.UTF-8 &&\
     apt-get autoclean -y &&\
     apt-get autoremove -y &&\
     apt-get update &&\
-    #apt-get -y dist-upgrade &&\
+    apt-get -y upgrade &&\
+    apt-get -y dist-upgrade &&\
 # install utilities
     apt-get install -f -y apt-utils python-software-properties software-properties-common&&\
     add-apt-repository ppa:jonathonf/texlive -y &&\
