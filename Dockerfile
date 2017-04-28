@@ -1,16 +1,18 @@
 #tianon/latex
 #FROM debian:latest
 FROM ubuntu:16.04
-
+ARG DEBIAN_FRONTEND=noninteractive
 RUN export LANG=C.UTF-8 &&\
-    add-apt-repository ppa:jonathonf/texlive -y &&\
     apt-get clean &&\
     apt-get update &&\
     apt-get autoclean -y &&\
     apt-get autoremove -y &&\
     apt-get update &&\
+    #apt-get -y dist-upgrade &&\
 # install utilities
-    apt-get install -f -y apt-utils &&\
+    apt-get install -f -y apt-utils python-software-properties software-properties-common&&\
+    add-apt-repository ppa:jonathonf/texlive -y &&\
+    apt-get update &&\
 # install some nice chinese fonts
     apt-get install -f -y fonts-arphic-bkai00mp \
                           fonts-arphic-bsmi00lp \
