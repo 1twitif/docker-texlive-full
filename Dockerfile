@@ -27,7 +27,7 @@ RUN export LANG=C.UTF-8 &&\
     apt-get install -f -y texlive-full biber latexmk make ghostscript latex-cjk-common latex-cjk-chinese \
                           texlive-fonts-extra texlive-fonts-recommended texlive-math-extra texlive-lang-cjk \                          
                           texlive-luatex texlive-pstricks texlive-science texlive-xetex \
-                          texlive-latex-extra textlive-lang-arabic xfonts-intl-arabic \
+                          texlive-latex-extra texlive-lang-arabic xfonts-intl-arabic \
                           xfonts-efont-unicode xfonts-efont-unicode-ib &&\
 # free huge amount of unused space
     apt-get purge -f -y make-doc \
